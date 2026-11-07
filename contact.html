@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | D.S.A Service Informatique</title>
+  <meta name="description" content="Contactez D.S.A Service Informatique à Niofoin, Groupe Scolaire NIOFOIN. WhatsApp : 07 59 42 96 55. Téléphone : 05 55 50 33 31.">
+  <link rel="icon" type="image/svg+xml" href="img/logo-dsa.svg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar navbar-expand-lg navbar-dsa fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo-dsa.svg" alt="Logo D.S.A Service Informatique">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Ouvrir le menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="a-propos.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/2250759429655" target="_blank" rel="noopener">
+              <i class="bi bi-whatsapp"></i> WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== EN-TÊTE ========== -->
+  <header class="page-header">
+    <div class="container">
+      <h1>Contactez-nous</h1>
+      <p>Une question, un devis, un projet ? Nous vous répondons rapidement.</p>
+    </div>
+  </header>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Coordonnées -->
+        <div class="col-lg-5 apparait">
+          <div class="bloc-contact">
+            <h3 class="mb-4" style="color: var(--bleu-fonce);">Nos coordonnées</h3>
+
+            <div class="ligne">
+              <div class="pastille"><i class="bi bi-geo-alt-fill"></i></div>
+              <div>
+                <strong>Adresse</strong><br>
+                Niofoin, Groupe Scolaire NIOFOIN
+              </div>
+            </div>
+
+            <div class="ligne">
+              <div class="pastille" style="background:#25d366;"><i class="bi bi-whatsapp"></i></div>
+              <div>
+                <strong>WhatsApp</strong><br>
+                <a href="https://wa.me/2250759429655" target="_blank" rel="noopener">07 59 42 96 55</a>
+              </div>
+            </div>
+
+            <div class="ligne">
+              <div class="pastille"><i class="bi bi-telephone-fill"></i></div>
+              <div>
+                <strong>Téléphone</strong><br>
+                <a href="tel:+2250555503331">05 55 50 33 31</a>
+              </div>
+            </div>
+
+            <div class="d-flex flex-wrap gap-2 mt-4">
+              <a href="https://wa.me/2250759429655" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                <i class="bi bi-whatsapp"></i> Écrire sur WhatsApp
+              </a>
+              <a href="tel:+2250555503331" class="btn btn-dsa">
+                <i class="bi bi-telephone-fill"></i> Appeler
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Formulaire -->
+        <div class="col-lg-7 apparait">
+          <div class="bloc-contact">
+            <h3 class="mb-2" style="color: var(--bleu-fonce);">Envoyez-nous un message</h3>
+            <p class="text-muted mb-4">Votre message sera envoyé directement sur notre WhatsApp.</p>
+
+            <form id="form-contact">
+              <div class="mb-3">
+                <label for="nom" class="form-label fw-semibold">Votre nom</label>
+                <input type="text" class="form-control" id="nom" placeholder="Ex : Kouassi Yao" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="sujet" class="form-label fw-semibold">Sujet</label>
+                <select class="form-select" id="sujet" required>
+                  <option value="" selected disabled>Choisissez un service</option>
+                  <option>Impression / Photocopie</option>
+                  <option>Scan et saisie de documents</option>
+                  <option>Reliure et plastification</option>
+                  <option>Affiche publicitaire</option>
+                  <option>Création de logo</option>
+                  <option>Vidéo publicitaire</option>
+                  <option>Photo minute</option>
+                  <option>Mariage (photo / vidéo)</option>
+                  <option>Installation de système</option>
+                  <option>Accessoires informatiques</option>
+                  <option>Autre</option>
+                </select>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label fw-semibold">Votre message</label>
+                <textarea class="form-control" id="message" rows="5" placeholder="Décrivez votre besoin..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-whatsapp">
+                <i class="bi bi-send-fill"></i> Envoyer sur WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer-dsa">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img src="img/logo-dsa.svg" alt="D.S.A" height="70" class="mb-3">
+          <p>Votre partenaire en impression et services numériques. La qualité qui fait la différence !</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Navigation</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact</h5>
+          <p class="mb-1"><i class="bi bi-geo-alt-fill"></i> Niofoin, Groupe Scolaire NIOFOIN</p>
+          <p class="mb-1"><i class="bi bi-whatsapp"></i> <a href="https://wa.me/2250759429655" target="_blank" rel="noopener">07 59 42 96 55</a></p>
+          <p class="mb-1"><i class="bi bi-telephone-fill"></i> <a href="tel:+2250555503331">05 55 50 33 31</a></p>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; <span id="annee">2026</span> D.S.A Service Informatique. Tous droits réservés.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/2250759429655" class="whatsapp-flottant" target="_blank" rel="noopener" aria-label="Discuter sur WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

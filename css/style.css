@@ -1,0 +1,451 @@
+/* =========================================
+   D.S.A Service Informatique - style.css
+   ========================================= */
+
+:root {
+  --bleu-nuit: #06122e;
+  --bleu-fonce: #0a1f5c;
+  --bleu-elec: #00b4ff;
+  --bleu-royal: #0a3fd6;
+  --argent: #c9d6ea;
+  --jaune: #ffc928;
+  --blanc: #ffffff;
+  --texte: #1c2540;
+  --fond-clair: #f1f6ff;
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  color: var(--texte);
+  background: var(--blanc);
+  padding-top: 76px; /* hauteur de la navbar fixe */
+}
+
+h1, h2, h3, h4 {
+  font-weight: 800;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------- Navbar ---------- */
+.navbar-dsa {
+  background: var(--bleu-nuit);
+  border-bottom: 2px solid var(--bleu-elec);
+  box-shadow: 0 4px 18px rgba(0, 180, 255, 0.25);
+}
+
+.navbar-dsa .navbar-brand img {
+  height: 52px;
+  width: auto;
+}
+
+.navbar-dsa .nav-link {
+  color: var(--argent);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: color 0.25s;
+}
+
+.navbar-dsa .nav-link:hover,
+.navbar-dsa .nav-link.active {
+  color: var(--bleu-elec);
+}
+
+.navbar-dsa .navbar-toggler {
+  border-color: var(--bleu-elec);
+}
+
+.navbar-dsa .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+/* ---------- Boutons ---------- */
+.btn-dsa {
+  background: linear-gradient(135deg, var(--bleu-elec), var(--bleu-royal));
+  color: var(--blanc);
+  font-weight: 700;
+  border: none;
+  border-radius: 50px;
+  padding: 0.7rem 1.8rem;
+  box-shadow: 0 6px 18px rgba(10, 63, 214, 0.35);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.btn-dsa:hover {
+  color: var(--blanc);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0, 180, 255, 0.5);
+}
+
+.btn-dsa-outline {
+  border: 2px solid var(--bleu-elec);
+  color: var(--bleu-elec);
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 0.65rem 1.8rem;
+  background: transparent;
+  transition: all 0.25s;
+}
+
+.btn-dsa-outline:hover {
+  background: var(--bleu-elec);
+  color: var(--bleu-nuit);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: var(--blanc);
+  font-weight: 700;
+  border-radius: 50px;
+  padding: 0.7rem 1.8rem;
+  border: none;
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5b;
+  color: var(--blanc);
+}
+
+/* ---------- Hero (accueil) ---------- */
+.hero {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(0, 180, 255, 0.35), transparent 45%),
+    linear-gradient(160deg, var(--bleu-nuit) 0%, var(--bleu-fonce) 100%);
+  color: var(--blanc);
+  padding: 90px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.1;
+}
+
+.hero h1 span {
+  color: var(--bleu-elec);
+}
+
+.hero .slogan {
+  font-size: 1.25rem;
+  color: var(--argent);
+  margin: 1rem 0 2rem;
+}
+
+.hero .slogan strong {
+  color: var(--jaune);
+}
+
+.hero-logo {
+  max-width: 360px;
+  width: 100%;
+  filter: drop-shadow(0 0 30px rgba(0, 180, 255, 0.5));
+  animation: flotter 4s ease-in-out infinite;
+}
+
+@keyframes flotter {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+/* ---------- En-tête de page (pages internes) ---------- */
+.page-header {
+  background: linear-gradient(160deg, var(--bleu-nuit), var(--bleu-fonce));
+  color: var(--blanc);
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 4px solid var(--bleu-elec);
+}
+
+.page-header p {
+  color: var(--argent);
+  margin: 0;
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 70px 0;
+}
+
+.section-clair {
+  background: var(--fond-clair);
+}
+
+.section-titre {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-titre h2 {
+  color: var(--bleu-fonce);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.6rem;
+}
+
+.section-titre h2::after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  bottom: 0;
+  width: 50%;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--bleu-elec), var(--jaune));
+}
+
+.section-titre p {
+  color: #5b6685;
+  margin-top: 0.8rem;
+}
+
+/* ---------- Cartes de services ---------- */
+.carte-service {
+  background: var(--blanc);
+  border: 1px solid #dbe6fb;
+  border-radius: 18px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.carte-service:hover {
+  transform: translateY(-8px);
+  border-color: var(--bleu-elec);
+  box-shadow: 0 14px 30px rgba(10, 63, 214, 0.18);
+}
+
+.carte-service .icone {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 1.2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--blanc);
+  background: linear-gradient(135deg, var(--bleu-elec), var(--bleu-royal));
+  box-shadow: 0 6px 16px rgba(0, 180, 255, 0.4);
+}
+
+.carte-service h3 {
+  font-size: 1.15rem;
+  color: var(--bleu-fonce);
+}
+
+.carte-service p {
+  color: #5b6685;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ---------- Bandeau des valeurs ---------- */
+.valeurs {
+  background: linear-gradient(90deg, var(--bleu-royal), var(--bleu-elec));
+  color: var(--blanc);
+  padding: 28px 0;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.valeurs i {
+  color: var(--jaune);
+  margin-right: 0.4rem;
+}
+
+/* ---------- Contact ---------- */
+.bloc-contact {
+  background: var(--blanc);
+  border-radius: 18px;
+  padding: 2rem;
+  border: 1px solid #dbe6fb;
+  box-shadow: 0 8px 24px rgba(10, 63, 214, 0.08);
+  height: 100%;
+}
+
+.bloc-contact .ligne {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.bloc-contact .ligne .pastille {
+  flex: 0 0 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--bleu-elec), var(--bleu-royal));
+  color: var(--blanc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.form-control:focus {
+  border-color: var(--bleu-elec);
+  box-shadow: 0 0 0 0.2rem rgba(0, 180, 255, 0.25);
+}
+
+/* ---------- Pied de page ---------- */
+.footer-dsa {
+  background: var(--bleu-nuit);
+  color: var(--argent);
+  padding: 50px 0 20px;
+  border-top: 3px solid var(--bleu-elec);
+}
+
+.footer-dsa h5 {
+  color: var(--blanc);
+  margin-bottom: 1rem;
+}
+
+.footer-dsa a {
+  color: var(--argent);
+  transition: color 0.25s;
+}
+
+.footer-dsa a:hover {
+  color: var(--bleu-elec);
+}
+
+.footer-dsa .copyright {
+  border-top: 1px solid rgba(201, 214, 234, 0.2);
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ---------- Bouton WhatsApp flottant ---------- */
+.whatsapp-flottant {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  color: var(--blanc);
+  font-size: 1.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  z-index: 1050;
+  animation: pulse 2s infinite;
+}
+
+.whatsapp-flottant:hover {
+  color: var(--blanc);
+  transform: scale(1.1);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* ---------- Apparition au défilement (utilisé par main.js) ---------- */
+.apparait {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.apparait.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767px) {
+  .hero {
+    padding: 60px 0 70px;
+    text-align: center;
+  }
+
+  .hero-logo {
+    max-width: 240px;
+    margin-top: 2rem;
+  }
+
+  .section {
+    padding: 50px 0;
+  }
+}
+
+/* ---------- Images des cartes de services ---------- */
+.page-services .carte-service {
+  overflow: hidden;
+  padding: 0 0 1.6rem;
+}
+
+.page-services .carte-service .image-service {
+  display: block;
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  margin: 0 0 1.35rem;
+  transition: transform 0.45s ease;
+  background: #eaf1fb;
+}
+
+.page-services .carte-service:hover .image-service {
+  transform: scale(1.045);
+}
+
+.page-services .carte-service h3,
+.page-services .carte-service p {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.page-services .carte-service h3 {
+  min-height: 2.6rem;
+}
+
+@media (max-width: 767px) {
+  .page-services .carte-service .image-service {
+    height: 170px;
+  }
+}
+
+
+/* ---------- Bouton de demande sur les cartes de services ---------- */
+.page-services .btn-demander-service {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  background: #25d366;
+  border: 1px solid #25d366;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.page-services .btn-demander-service:hover {
+  background: #1da851;
+  border-color: #1da851;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.25);
+}
